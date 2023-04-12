@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  node-mocha:
+    stdin_open: true  # docker run -i
+    tty: true         # docker run -t
+    build:
+      context: .
+    image: node/mocha
+    container_name: node-mocha
+    volumes:
+      - ./practica1:/home/node/practica1

@@ -157,6 +157,8 @@ describe('Practica1', function () {
       assert.equal(practica1.misterio10(),"Hoy es el día "+new Date().getDay()+" del mes "+new Date().getMonth());
       });
   });
+
+  
   describe('Ejercicio11', function () {
     it('Ejercicio misterio11', function () {
         assert.equal(practica1.misterio11("hola"),"longitud:4");

@@ -122,9 +122,9 @@ function misterio9(filas, columnas){
         return "Introduce dos números positivos menores que 10";
     } else {
         let result = "<table>";
-        for (let i = 0; i < columnas; i++) {
+        for (let i = 0; i < filas; i++) {
             result += "<tr>";
-            for (let j = 0; j < filas; j++) {
+            for (let j = 0; j < columnas; j++) {
                 result += "<td></td>";
             }
             result += "</tr>";
@@ -136,7 +136,7 @@ function misterio9(filas, columnas){
 
 function misterio10(){
     today = new Date();
-    return "El número del día se obtiene con " + today.getDate() + " y el del mes " + (today.getMonth() + 1);
+    return "Hoy es el día " + today.getDay() + " del mes " + today.getMonth();
 }
 
 function misterio11(phrase){

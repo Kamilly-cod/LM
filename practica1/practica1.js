@@ -117,16 +117,34 @@ function misterio8(num){
     }    
 }
 
-function misterio9(){
-    return true;
+function misterio9(filas, columnas){
+    if (typeof(filas) === "string" || typeof(columnas) === "string" || filas > 9 || filas < 1 || columnas > 9 || columnas < 1){
+        return "Introduce dos números positivos menores que 10";
+    } else {
+        let result = "<table>";
+        for (let i = 0; i < columnas; i++) {
+            result += "<tr>";
+            for (let j = 0; j < filas; j++) {
+                result += "<td></td>";
+            }
+            result += "</tr>";
+        }
+        result += "</table>";
+        return result;
+    }
 }
 
 function misterio10(){
-    return true;
+    today = new Date();
+    return "El número del día se obtiene con " + today.getDate() + " y el del mes " + (today.getMonth() + 1);
 }
 
-function misterio11(){
-    return true;
+function misterio11(phrase){
+    if (typeof(phrase) !== "string"){
+        return "Mete un string";
+    } else {
+        return (phrase.length >= 10) ? ("substring:" + phrase.substring(2, 4)) : ("longitud:" + phrase.length);
+    }
 }
 function misterio12(){
     return true;
@@ -149,8 +167,8 @@ function misterio17(){
 function misterio18(){
     return true;
 }
-function misterio19(){
-    return true;
+function misterio19(json){
+    return json.nombre + " " + json.apellido1 + " " + json.apellido2 + ".";
 }
 function misterio20(){
     return true;

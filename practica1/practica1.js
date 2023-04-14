@@ -143,7 +143,7 @@ function misterio11(phrase){
     if (typeof(phrase) !== "string"){
         return "Mete un string";
     } else {
-        return (phrase.length >= 10) ? ("substring:" + phrase.substring(2, 4)) : ("longitud:" + phrase.length);
+        return (phrase.length >= 10) ? ("substring:" + phrase.substring(1, 4)) : ("longitud:" + phrase.length);
     }
 }
 
@@ -218,9 +218,9 @@ function misterio20(arr, posicion) {
         return "No es posible";
     }
 
-    const JSON = { resultado: arr[posicion] };
+    const json = { resultado: arr[posicion] };
    
-    return JSON.stringify(JSON);
+    return JSON.stringify(json);
  }
 
 

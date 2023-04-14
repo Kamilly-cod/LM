@@ -209,18 +209,18 @@ function misterio19(json){
     return json.nombre + " " + json.apellido1 + " " + json.apellido2 + ".";
 }
 
-function misterio20(arr, pos) {
-    if (!Array.isArray(arr) || typeof pos !== "number") {
+function misterio20(arr, posicion) {
+    if (!Array.isArray(arr) || typeof posicion !== "number") {
         return "No es posible";
     }
      
-    if (pos >= arr.length || pos < 0) {
+    if (posicion >= arr.length || posicion < 0) {
         return "No es posible";
     }
 
-    const resultadoJSON = { resultado: arr[pos] };
+    const JSON = { resultado: arr[posicion] };
    
-    return JSON.stringify(resultadoJSON);
+    return JSON.stringify(JSON);
  }
 
 

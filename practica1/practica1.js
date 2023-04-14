@@ -2,9 +2,9 @@ const CODIGO=25;
 
 function misterio1(edad){
     if((typeof(edad)==="number") && (edad >=18 && edad <=120)){
-        return "Puedes conducir"
+        return "Puedes conducir";
     }else{
-        return "Introduce un numero válido"
+        return "Introduce un numero válido";
     }     
 }
 
@@ -13,9 +13,9 @@ function misterio2(numero){
     var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
     numero = parseInt(numero);
     if(numero <= 0 || numero >= 13){
-        return "No es un mes"
+        return "No es un mes";
     }else{
-        return meses[numero - 1]
+        return meses[numero - 1];
     } 
 } 
 
@@ -59,14 +59,14 @@ function misterio4(numero, letra) {
 function misterio5(array) {
     
     if (!Array.isArray(array)) {
-      return "No es posible"
+      return "No es posible";
     }
   
     if (array.length >= 3) {
       return array[2];
     }
    
-    return "No es posible"
+    return "No es posible";
   }
 
 function misterio6(nota){
@@ -146,34 +146,82 @@ function misterio11(phrase){
         return (phrase.length >= 10) ? ("substring:" + phrase.substring(2, 4)) : ("longitud:" + phrase.length);
     }
 }
-function misterio12(){
-    return true;
+
+function misterio12(phrase){
+    if (typeof(phrase) !== "string"){
+        return "Mete un string";
+    } else {
+        return phrase.split("").reverse().join("");
+    }
 }
-function misterio13(){
-    return true;
+
+function misterio13(phrase){
+    if (typeof(phrase) !== "string"){
+        return "Mete un string";
+    } else {
+        return phrase.toUpperCase();
+    }
 }
-function misterio14(){
-    return true;
+
+function misterio14(phrase){
+    if (typeof(phrase) !== "string"){
+        return "Mete un string";
+    } else {
+        return phrase.includes("DAW");
+    }
 }
-function misterio15(){
-    return true;
+
+function misterio15(nombre, apellido1, apellido2){
+    if (typeof(nombre) !== "string" || typeof(apellido1) !== "string" || typeof(apellido2) !== "string"){
+        return "Alguno no es string";
+    } else {
+        const json = {nombre: nombre, apellido1: apellido1, apellido2: apellido2};
+        return JSON.stringify(json);
+    }
 }
-function misterio16(){
-    return true;
+function misterio16(phrase){
+    if (typeof(phrase) !== "string"){
+        return "Mete un string";
+    } else {
+        return phrase.replace("suspender", "aprobar");
+    }
 }
-function misterio17(){
-    return true;
+
+function misterio17(arr) {
+    let uList = "<ul>";
+    for (let i = 0; i < arr.length; i++) {
+      uList += "<li>" + arr[i] + "</li>";
+    }
+    uList += "</ul>";
+    return uList;
 }
-function misterio18(){
-    return true;
+  
+function misterio18(arr) {
+    let oList = '<ol>';
+    for (let i = arr.length - 1; i >= 0; i--) {
+        oList = oList + '<li>' + arr[i] + '</li>';
+    }
+    oList = oList + '</ol>';
+    return oList;
 }
+
 function misterio19(json){
     return json.nombre + " " + json.apellido1 + " " + json.apellido2 + ".";
 }
-function misterio20(){
-    return true;
-}
 
+function misterio20(arr, pos) {
+    if (!Array.isArray(arr) || typeof pos !== "number") {
+        return "No es posible";
+    }
+     
+    if (pos >= arr.length || pos < 0) {
+        return "No es posible";
+    }
+
+    const resultadoJSON = { resultado: arr[pos] };
+   
+    return JSON.stringify(resultadoJSON);
+ }
 
 
  module.exports = {
